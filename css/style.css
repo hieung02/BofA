@@ -1,0 +1,135 @@
+/* Mobile Device  */
+
+/* Remove browser default padding and margin style */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Set body style */
+
+body {
+  color: #2C3A47;
+  font-size: 16px;
+  font-family: Arial;
+  line-height: 150%;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+main {
+  padding: 0 10px;
+}
+
+header {
+  margin: 20px 0;
+}
+
+/* Set heading style */
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* Set grocery list to column */
+
+.grocery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column
+}
+
+/* Set grocery item (child) style */
+
+.item {
+  border-right: 5px solid;
+  border-bottom: 5px solid;
+  border-color: #E17055;
+  background-color: #FFF4D5;
+  list-style: none;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.grocery-item>h2 {
+  border-bottom: 2px solid;
+  border-color: #B5B5B4;
+}
+
+/* Set each grocery quantity style */
+
+.quantity {
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+/* case agnostic */
+
+.txt-uppercase {
+  text-transform: uppercase;
+}
+
+.txt-capitalize {
+  text-transform: capitalize;
+}
+
+/* Grocery quantity and category have same style */
+
+.quantity,
+.category {
+  color: #E17055;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Set grocery brand style */
+
+.brand {
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+/* Set grocery category style */
+
+.category {
+  margin-top: 2rem
+}
+
+/* Medium Device */
+
+@media only screen and (min-width: 768px) {
+  /* Set grocery list to row */
+  .grocery {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  /* Set grocery item to row */
+  .item {
+    margin-bottom: 2rem;
+    margin-right: 15px;
+    width: 23%
+  }
+  /* Remove margin on every 4th grocery item */
+  .item:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+/* Large Device */
+
+@media only screen and (min-width: 1025px) {
+  main {
+    padding: 0;
+  }
+  /* Center grocery items */
+  .grocery {
+    justify-content: flex-start;
+  }
+}
